@@ -3,9 +3,9 @@ import sys
 import tkinter.filedialog
 
 class TkinterClass:
-    def _init
-root = tk.Tk()
-root.option_add("*font", ('', 14))
+    def __init__():
+        root = tk.Tk()
+        root.option_add("*font", ('', 14))
 
 # variable 用のオブジェクト
 action = tk.IntVar()
