@@ -6,23 +6,27 @@ root.title(u"People Count")
 root.geometry('400x300')
 counter = 0
 
-
-button = tk.Button(text="インクリメント", height = 5, width = 20)
+buttona = tk.Button(text="デクリメント", height = 5, width = 20)
+buttonb = tk.Button(text="インクリメント", height = 5, width = 20)
 resetButton = tk.Button(text="reset")
 
 def clicked():
-    global counter, button
+    global counter, buttona, buttonb
     counter = counter + 1
 
 def reset():
     global counter,resetButton
     counter = 0
-    button.config(text=str(counter))
+    buttona.config(text=str(counter))
+    buttonb.config(text=str(counter))
 
-button.config(command=clicked)
+buttona.config(command=clicked)
+buttonb.config(command=clicked)
 resetButton.config(command=reset)
 
-button.pack()
+buttona.pack()
+buttonb.pack()
 resetButton.pack()
-button.mainloop()
+buttona.mainloop()
+buttonb.mainloop()
 resetButton.mainloop()
